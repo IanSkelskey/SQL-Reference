@@ -17,7 +17,7 @@ A SQL cheat sheet that I made while taking SER322: Database Management at Arizon
 
 Types and descriptions are from [W3Schools](https://www.w3schools.com/sql/sql_datatypes.asp).
 
-## Creating a New Table
+## CREATE TABLE
 
 Adds a new table to a database with specified fields and keys.
 
@@ -30,7 +30,7 @@ CREATE TABLE TABLE_NAME (
 );
 ```
 
-## Dropping a Table
+## DROP TABLE
 
 Drops an existing table from a database. Be careful with this. 
 Dropping a table will cause all data that it contains to be lost.
@@ -39,10 +39,28 @@ Dropping a table will cause all data that it contains to be lost.
 DROP TABLE TABLE_NAME;
 ```
 
-## Truncating a Table
+## TRUNCATE TABLE
 
 Truncating a table deletes the data inside a table, but not the table itself.
 
 ```sql
 TRUNCATE TABLE TABLE_NAME;
+```
+
+## INSERT INTO
+
+Add rows to an existing table. 
+
+1. Specify the columns that you'd like to populate.
+
+```sql
+INSERT INTO TABLE_NAME (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
+
+2. If you are adding data in all columns, the specification is not necessary, and you can use this simplified syntax.
+
+```sql
+INSERT INTO TABLE_NAME
+VALUES (value1, value2, value3, ...);
 ```
